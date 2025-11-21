@@ -1,8 +1,82 @@
+/* Robot GIF from Giphy - https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzJuMW9zcjlzb3VuNDJkY2FjeTJpcHd0b250czFpeTJkdXViamZlbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9yC8WFP8PJGA6r1yqd/giphy.gif */
+
 html {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
-    min-height: 100vh;
+    background: black;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding: 20px; 
+    box-sizing: border-box;
+}
+
+.box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-middle {
+    flex-grow: 1; 
+    overflow: hidden; 
+    margin: 20px 0; 
+}
+
+.box-middle img {
+    max-width: 100%; 
+    max-height: 100%; 
+    object-fit: contain; 
+}
+
+.box-bottom audio {
+    width: 100%;
+}
+
+/* --- Button Styles --- */
+button {
+    transition: all 0.3s ease-in-out;
+    font-family: "Dosis", sans-serif;
+}
+
+button {
+    width: 150px;
+    height: 60px;
+    border-radius: 50px;
+    background-image: linear-gradient(135deg, rgb(254, 182, 146) 0%, red 100%);
+    outline: none;
+    cursor: pointer;
+    border: none;
+    font-size: 24px;
+    color: white;
+    box-shadow: 0 8px 20px -6px rgba(238, 103, 97, 0.5);
+}
+
+button:hover {
+    transform: translateY(3px);
+    box-shadow: none;
+}
+
+button:active {
+    opacity: 0.5;
+}
+
+/* --- Media Query --- */
+@media screen and (max-width: 1000px) {
+    .container {
+        background-position: center center;
+        background-size: cover;
+    }
 }
